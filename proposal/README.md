@@ -1,10 +1,10 @@
 # Proposal documents
-Upload your file here in the folder named "Name Proposal" like "ZHANG Sanyi Proposal" in doc/docx/pdf format.
+Upload your file here in the folder named "Name Proposal" like "ZTY Proposal" in doc/docx/pdf format.
 # group members
 | Name | Uploaded |
 | -------- | -------- |
 | Group | ✓|
-| LUO Suhai | ✓|
+| LSH | ✓|
 |  | ✓ |
 |  | ✓ |
 |  | ✓ |
