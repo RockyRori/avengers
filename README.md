@@ -1,13 +1,12 @@
 # Avengers
 Data Mining Group Project
-# Group Members
-### LSH
-# Record Contribution
-| Name | 
-| -------- | 
-| LSH | 
-| HXH | 
-| TBW | 
-| SLL | 
-| GYQ | 
-| DXY | 
+
+# Group Members With Contribution
+| Name |  Proposal | 
+| --- |  --- | 
+| LSH | |
+| HXH | |
+| TBW | |
+| SLL | |
+| GYQ | |
+| DXY | |
