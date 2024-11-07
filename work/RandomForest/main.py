@@ -83,6 +83,9 @@ for feature in missing_features:
 # Step 5: Reorder columns in the test set to match the order in the training set
 test_encoded = test_encoded[X_train.columns]
 
+feature_importances = pd.Series(model.feature_importances_, index=X_train.columns)
+print(123)
+print(feature_importances.head(10))
 # Step 6: Generate Predictions
 predictions = model.predict(test_encoded)
 
