@@ -83,9 +83,6 @@ for feature in missing_features:
 # Step 5: Reorder columns in the test set to match the order in the training set
 test_encoded = test_encoded[X_train.columns]
 
-feature_importances = pd.Series(model.feature_importances_, index=X_train.columns)
-print(123)
-print(feature_importances.head(10))
 # Step 6: Generate Predictions
 predictions = model.predict(test_encoded)
 
@@ -108,6 +105,10 @@ model.fit(X_train, Y_train)
 # Step 3: Generate Predictions on the validation set
 val_predictions = model.predict(X_val)
 
-# Step 4: Check Accuracy on the validation set
+# Step 4: Check importance
+feature_importances = pd.Series(model.feature_importances_, index=X_train.columns)
+print(feature_importances.head(10))
+
+# Step 5: Check Accuracy on the validation set
 val_accuracy = accuracy_score(Y_val, val_predictions)
 print(f"Validation Accuracy: {val_accuracy}")
