@@ -10,11 +10,11 @@ https://pla.ln.edu.hk/
 https://www.kaggle.com/competitions/predict-student-performance-from-game-play
 
 # Group Members With Contribution
-| Name |  Proposal | 
-| --- |  --- | 
-| LSH | ✓|
-| HXH | ✓|
-| TBW | ✓|
-| SLL | ✓|
-| GYQ | ✓|
-| DXY | ✓|
+| Name | Proposal | Target | Result |
+|------|----------|--------|--------|
+| LSH  | ✓        | ✓      | ✓      |
+| HXH  | ✓        | ✓      | ✓      |
+| TBW  | ✓        | ✓      | ✓      |
+| SLL  | ✓        | ✓      | ✓      |
+| GYQ  | ✓        | ✓      | ✓      |
+| DXY  | ✓        | ✓      | ✓      |
