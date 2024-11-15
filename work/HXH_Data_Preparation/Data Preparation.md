@@ -43,7 +43,7 @@ The goal of our task is using various health and lifestyle factors to predict a 
 - The target variable `NObeyesdad` was excluded from one-hot encoding and was stored separately as the dependent variable for model training.
 
 **2.3. Ensuring Consistency Between Train and Test Sets**
-- A check was performed to ensure that the categorical features in both the train and test datasets were consistent. If discrepancies were found (e.g., differences in the levels of categorical variables), they were addressed before modeling:
+- A check was performed to ensure that the categorical features in both the train and test datasets were consistent. If discrepancies were found such as differences in the levels of categorical variables, they were addressed before modeling:
   
   - Example: The `CALC` feature in the test set had a new value ("Always") not present in the training set. This was replaced with an already existing category ("Frequently").
 
