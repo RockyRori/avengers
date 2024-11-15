@@ -14,14 +14,15 @@ preprocessing
 """
 # read data from training set
 train = pd.read_csv('train.csv')
-print(train.head())
+print("\ntrain.head\n", train.head())
 
 # read data from testing set
 test = pd.read_csv('test.csv')
-print(test.head())
+print("\ntest.head\n", test.head())
 
 # display attributes and distinct values count
 train.nunique().sort_values(ascending=False)
+print("\ntrain.info\n")
 train.info()
 
 # remove useless attributes
@@ -33,7 +34,7 @@ train.head()
 test.head()
 
 # calculate distribution of NObeyesdad values
-print(round(train['NObeyesdad'].value_counts() * 100 / len(train), 2))
+print("\nNObeyesdad.distribution\n", round(train['NObeyesdad'].value_counts() * 100 / len(train), 2))
 
 # select object typed attributes except target
 cat = list(train.select_dtypes(['object']).columns)
@@ -48,8 +49,8 @@ for i in cat:
         continue
 
 # only CALC is not aligned
-print(train['CALC'].value_counts())
-print(test['CALC'].value_counts())
+print("\ntrain.CALC\n", train['CALC'].value_counts())
+print("\ntest.CALC\n", test['CALC'].value_counts())
 
 # replace new appearance with shown
 test['CALC'] = test['CALC'].replace('Always', 'Frequently')
@@ -107,8 +108,8 @@ val_predictions = model.predict(X_val)
 
 # Step 4: Check importance
 feature_importances = pd.Series(model.feature_importances_, index=X_train.columns)
-print(feature_importances.head(10))
+print("\nfeature_importances\n", feature_importances.head(10))
 
 # Step 5: Check Accuracy on the validation set
 val_accuracy = accuracy_score(Y_val, val_predictions)
-print(f"Validation Accuracy: {val_accuracy}")
+print("\nval_accuracy\n", f"Validation Accuracy: {val_accuracy}")
