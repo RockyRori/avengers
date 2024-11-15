@@ -1,7 +1,7 @@
-### Data Preparation Report for Kaggle Competition: Multi-Class Prediction of Obesity Risk
+### Data Preparation for Multi-Class Prediction of Obesity Risk
 
 #### **Introduction**
-The goal of this competition is to predict an individual's obesity risk category, represented by the target variable `NObeyesdad`, using various health and lifestyle factors. The task involves building a multi-class classification model to predict the obesity risk levels for the test dataset. This report outlines the data preparation process used to create a robust machine learning model based on the provided training and test datasets.
+The goal of our task is using various health and lifestyle factors to predict a person's obesity risk category, represented by the target variable `NObeyesdad`. The task involves building a multi-class classification model to predict the obesity risk levels for the test dataset. This report outlines the data preparation process used to create a robust machine learning model based on the provided training and test datasets.
 
 ---
 
@@ -52,7 +52,7 @@ The goal of this competition is to predict an individual's obesity risk category
   ```
 
 **2.4. Handling Missing Features in Test Data**
-- After one-hot encoding, there were cases where some features present in the training data were missing in the test set. These missing features were added to the test set with a value of 0 to ensure consistency between the datasets.
+- After one-hot encoding, There were cases where some features present in the training data were missing in the test set. These missing features were added to the test set with a value of 0 to ensure consistency between the datasets.
   
   ```python
   missing_features = set(X_train.columns) - set(test_encoded.columns)
@@ -64,7 +64,7 @@ The goal of this competition is to predict an individual's obesity risk category
 
 #### **3. Feature Engineering**
 **3.1. Feature Selection**
-- After one-hot encoding, the features were carefully aligned between the training and test data. The target variable `NObeyesdad` was separated from the training data as `Y_train`, and the remaining features were used as input variables (`X_train`).
+- The features were carefully aligned between the training and test data after one-hot encoding. The target variable `NObeyesdad` was separated from the training data as `Y_train` and the remaining features were used as input variables (`X_train`).
 
 - **Potential for further feature engineering**: Calculating **BMI** using `Height` and `Weight` could be an additional feature that directly relates to obesity risk.
 
@@ -72,14 +72,14 @@ The goal of this competition is to predict an individual's obesity risk category
 
 #### **4. Validation and Model Training**
 **4.1. Train-Validation Split**
-- To evaluate model performance before making predictions on the test set, the training data was split into a training and a validation set using an 80/20 split. This allowed for testing the model’s generalizability and adjusting hyperparameters before making final predictions.
+- The training data was split into a training and a validation set using an 80/20 split to evaluate model performance before making predictions on the test set. This allowed for testing the model’s generalizability and adjusting hyperparameters before making final predictions.
 
   ```python
   X_train, X_val, Y_train, Y_val = train_test_split(X_train, Y_train, test_size=0.2, random_state=28)
   ```
 
 **4.2. Feature Importance**
-- After training the model, feature importance was evaluated to understand which features contributed the most to the predictions. This could provide insights for further feature selection or engineering.
+- Feature importance was evaluated to understand which features contributed the most to the predictions after training the model. This could provide insights for further feature selection or engineering.
 
   ```python
   feature_importances = pd.Series(model.feature_importances_, index=X_train.columns)
@@ -102,4 +102,4 @@ submission_df.to_csv('submission.csv', index=False)
 ---
 
 #### **Conclusion**
-The data preparation phase involved several key steps, including cleaning, encoding categorical variables, handling discrepancies between train and test sets, and preparing the data for modeling. Ensuring consistent feature alignment between the datasets was critical to avoid errors during model prediction. Additionally, feature importance and validation were integral to refining the model before making final predictions. The resulting predictions were formatted as required for submission to the Kaggle competition.
+The data preparation phase involves several important steps, such as cleaning, encoding categorical variables, handling the differences between the training and test sets, and preparing the data for modeling. Ensuring consistent feature alignment across datasets is critical to avoid errors in the model prediction process. In addition, the importance and validation of features are essential elements in refining the model before making final predictions.
