@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Data Understanding}
+\author{linling shen}
+\date{November 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+    The dataset we used is from a competition called 'Predict Student Performance from Game Play' on website platform Kaggle.This Kaggle competition focuses on predicting student performance from game play data. Most game-based learning platforms do not sufficiently make use of knowledge tracing to support individual students. Knowledge tracing methods have been developed and studied in the context of online learning environments and intelligent tutoring systems. But there has been less focus on knowledge tracing in educational games. 
+The dataset we used in this competition includes two parts:train.csv and test.csv.
+
+\section{Data description}
+    The attributes in CSV.format obtains:\textbf{session\_id} ,\textbf{index} ,\textbf{elapsed\_time} ,\textbf{event\_name} ,\textbf{room\_coor\_x} ,\textbf{room\_coor\_y} ,\textbf{screen\_coor\_x}  ,\textbf{screen\_coor\_y} ,and more.There is the format to describe the meaning of each attributes.
+    tab 1:Meaning of each attribute in the dataset
+    \begin{table}
+        \centering
+\caption{Caption}
+\label{tab:my_label}
+        \begin{tabular}{|c|c|} \hline 
+             Attribute& description\\ \hline 
+             session_id& the ID of the session the event took place in\\ \hline 
+             index&  the index of the event for the session\\ \hline 
+             elapsed_time& how much time has passed (in milliseconds) between the start of the session and when the event was recorded\\ \hline 
+             event_name&  the name of the event type\\ \hline 
+             name &  the event name (e.g. identifies whether a notebook_click is is opening or closing the notebook)\\ \hline 
+             level & what level of the game the event occurred in (0 to 22)\\ \hline 
+             page&  the page number of the event (only for notebook-related events)\\ \hline 
+             room_coor_x& the coordinates of the click in reference to the in-game room (only for click events)\\ \hline 
+             room_coor_y& the coordinates of the click in reference to the in-game room (only for click events)\\ \hline
+ screen_coor_x&the coordinates of the click in reference to the player’s screen (only for click events)\\\hline
+ screen_coor_y &the coordinates of the click in reference to the player’s screen (only for click events)\\\hline
+ hover_duration&how long (in milliseconds) the hover happened for (only for hover events)\\\hline
+ text& the text the player sees during this event\\\hline
+ fqid&the fully qualified ID of the event\\\hline
+ room_fqid &the fully qualified ID of the room the event took place in\\\hline
+ text_fqid&the fully qualified ID of the\\\hline
+ fullscreen & whether the player is in fullscreen mode\\\hline
+ hq&whether the game is in high-quality\\\hline
+ music&whether the game music is on or off\\\hline
+ level_group& which group of levels - and group of questions - this row belongs to (0-4, 5-12, 13-22)\\\hline
+        \end{tabular}
+        
+        
+    \end{table}
+
+\section{    References}
+[1] Predict Student Performance from Game Play
+\href{https://www.kaggle.com/competitions/predict-student-performance-from-game-play}
+\end{document}
